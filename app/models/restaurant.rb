@@ -7,4 +7,9 @@ class Restaurant < ApplicationRecord
   validates :phone_number, presence: true
   CATEGORIES = ["chinese", "italian", "japanese", "french", "belgian"]
   validates :category, inclusion: { in: CATEGORIES }
+
+  # # retrieve all the reviews for a restaurant
+  # def reviews
+  #   Review.where(restaurant_id: self.id)
+  # end
 end
